@@ -7,8 +7,14 @@ using UnityEngine.UI;
 
 public class InterfaceManager : MonoBehaviour
 {
-    [SerializeField]
-    private Button joinPlayerOne;
+
+    [SerializeField] private Button joinPlayerOne;
+    [SerializeField] private Button joinPlayerTwo;
+    [SerializeField] private Boolean p1Alive = false;
+    [SerializeField] private Boolean p2Alive = false;
+    [SerializeField] private Text p1Txt = null;
+    [SerializeField] private Text p2Txt = null;
+
 
     //TODO: Add PlayerTwoButton reference
 
@@ -18,15 +24,58 @@ public class InterfaceManager : MonoBehaviour
     void Start()
     {
         joinPlayerOne.onClick.AddListener(() => JoinPlayerOne());
-        //TODO Listen for player two click event
+        joinPlayerTwo.onClick.AddListener(() => JoinPlayerTwo());
+        
+       
+
     }
 
     private void JoinPlayerOne()
     {
-        playerInputManager.JoinPlayer(0, "Keyboard&Mouse");
+
+        if (p1Alive == false) {
+
+            playerInputManager.JoinPlayer(0, "Keyboard&Mouse");
+            p1Alive = true;
+            p1Txt.text = "Leave Player One";
+            
+
+        } else
+        {
+
+            p1Alive = false;
+            playerInputManager.LeavePlayer(0);
+            p1Txt.text = "Join Player One";
+
+        }
+        
         //TODO flip text to say "Leave Player One"
         //TODO on click after player has joined, remove player
     }
+
+    private void JoinPlayerTwo()
+    {
+
+        if (p2Alive == false) {
+
+            playerInputManager.JoinPlayer(1, "PlayerTwo");
+            p2Alive = true;
+            p2Txt.text = "Leave Player Two";
+
+        } else
+        {
+
+            p2Alive = false;
+            playerInputManager.LeavePlayer(1);
+            p2Txt.text = "Join Player Two";
+
+        }
+        
+        //TODO flip text to say "Leave Player One"
+        //TODO on click after player has joined, remove player
+    }
+
+
 
     //TODO Invoke JoinPlayer passing a playerIndex value and targeting a control scheme
     //TODO flip text after player has joined to say "Leave Player Two"

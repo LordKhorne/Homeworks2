@@ -31,9 +31,15 @@ public class SplitKeyboardPlayerInputManager : MonoBehaviour
         }
     }
 
-    //TODO remove player from game and free up playerIndex in existingPlayerInputs
     public void LeavePlayer(int playerIndex)
     {
-        var playerInput = existingPlayerInputs[playerIndex];
+        
+        if (existingPlayerInputs.ContainsKey(playerIndex))
+        {
+            var playerInput = existingPlayerInputs[playerIndex];
+            Destroy(playerInput.gameObject);
+            existingPlayerInputs.Remove(playerIndex);
+        }
+
     }
 }

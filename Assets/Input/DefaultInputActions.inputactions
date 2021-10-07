@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "PlayerTwoMove",
+                    "type": "Button",
+                    "id": "0ef56b17-50c7-418f-808e-2c081d52de35",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -209,7 +217,7 @@
                 },
                 {
                     "name": "PlayerTwoMove",
-                    "id": "1fe1a643-4b28-4432-beb7-7e586502da38",
+                    "id": "801bb43a-6b8b-4333-ad52-02dca9afda1b",
                     "path": "Dpad",
                     "interactions": "",
                     "processors": "",
@@ -220,8 +228,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "6403bc64-bb62-4005-90ac-e35edb6eb638",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "0e8af279-f3db-4f8e-9944-dcd86f71b8ca",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerTwo",
@@ -231,8 +239,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "a9f609d1-4254-4951-9a40-24cbbf878d48",
-                    "path": "<Keyboard>/downArrow",
+                    "id": "157c93b1-22ff-43c2-8572-145e78bf6f38",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerTwo",
@@ -242,8 +250,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "26a07e2c-cf45-4e8e-b02b-8058ba168989",
-                    "path": "<Keyboard>/leftArrow",
+                    "id": "2ff2f851-b984-4da9-bcf3-c34394206e7a",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerTwo",
@@ -253,8 +261,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "52f5764d-f6f6-4046-83f3-13186b93924d",
-                    "path": "<Keyboard>/rightArrow",
+                    "id": "6f1f9fb9-15a6-46e4-927e-7c7c4361e568",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerTwo",
